@@ -1,0 +1,118 @@
+#services {
+    background-color: $color-grey;
+    padding: 100px 0;
+
+    .contain {
+        padding: 0 6%;
+
+        .service-item {
+            height: 300px;
+            box-shadow: 0 5px 10px 0 rgba(8, 29, 42, 0.08);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                transform: translateY(-20px);
+            }
+
+            .sub-service {
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                
+                text-align: center;
+
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: #00324f;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    color: #00446a;
+                    padding: 0 10%;
+                }
+            }
+        }
+
+    }
+}
+
+@include responsive("1114px"){
+    #services {
+        padding: 60px 0;
+    
+        .contain {
+    
+            .service-item {
+        
+                .sub-service {
+                   top: 40%;
+                   left: 0;
+                }
+            }
+    
+        }
+    }
+}
+@include responsive("992px"){
+    #services {
+        padding-top: 0;
+    
+        .contain {
+    
+            .service-item {
+        
+                .sub-service {
+                    h3{
+                        font-size: $font-size-1;
+                    }
+                    p{
+                        font-size: 14px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+@include responsive("768px"){
+    #services {
+        .contain {
+    
+            .service-item {
+        
+                .sub-service {
+                    h3{
+                        font-size: $font-size-2;
+                    }
+                    p{
+                        font-size: $font-size-1;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+@include responsive("576px"){
+    #services {
+        .contain {
+    
+            .service-item {
+                background-size: 90%;
+                .sub-service {
+                    top: 46%;
+                    left: 16%;
+                }
+            }
+    
+        }
+    }
+}

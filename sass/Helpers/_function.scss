@@ -1,0 +1,23 @@
+@each $stt, $img in (1,item-1) (2,item-2) (3,item-3) (4,item-4){
+     .service-item-#{$stt}{
+            // background-image: url('../../img/#{$img}.jpg');
+            // background-size: cover;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            background:url('../../img/#{$img}.jpg');
+			background-size:120%;
+			background-position: center 0;
+			background-repeat:no-repeat;
+			background-color:$color-white;
+    }
+}
+
+@each $stt, $img in (1,discover-1) (2,discover-2) (3,discover-3) (4,discover-4) (5,discover-5){
+    .card-#{$stt}{
+        background-image: url('../../img/#{$img}.jpg');
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+   }
+}
+

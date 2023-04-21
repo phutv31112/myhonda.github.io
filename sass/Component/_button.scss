@@ -1,0 +1,37 @@
+.btnRed {
+    border: $border-4;
+    border-radius: 40px;
+    background-color: $color-orange;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    padding: $pd-1 $pd-2;
+    font-size: $font-size-1;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btnCaption{
+    padding: 6px 30px;
+}
+
+.btnRed:hover {
+    background-color: $color-white;
+    color: $color-orange;
+}
+
+.btnBlue {
+    border: 2px solid #2198dc;
+    border-radius: 40px;
+    @include button($color-white,$color-blue-200,$pd-1,$pd-2,$font-size-1,$font-weight-bold,transparent,$color-blue-100);
+}
+
+
+.btnWhite {
+    border: 2px solid #fff;
+    border-radius: 40px;
+    @include button($color-white,transparent,$pd-1,$pd-2,$font-size-1,$font-weight-bold,$color-white,$color-blue-100);
+}
+.btn_search{
+    @include button($color-blue-100,transparent,$pd-1,$pd-5,$font-size-1,$font-weight-bold,$color-blue-200,$color-dark-white);
+    border: 2px solid $color-blue-200;
+    border-radius: 40px;
+}

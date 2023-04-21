@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Honda Agent</title>
+
+    <!-- bootstrap 5 css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- main css  -->
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container-fluid p-0">
+                <div class="menu-mini">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.png" alt="...">
+                    </a>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#vehicleModal"
+                        class="nav-link active d-md-none d-inline" aria-current="page" href="#"><i class="fa fa-taxi"></i>
+                        VEHICLES</a>
+                    <a class="nav-link d-md-none d-inline" href="#"><i class="fa fa-map-marker-alt"></i> Dealers</a>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="d-flex">
+                            <li class="nav-item nav_item">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#vehicleModal"
+                                    class="nav-link active d-none d-md-inline " aria-current="page" href="#">VEHICLES <i
+                                        class="fa fa-angle-down"></i></a>
+
+                            </li>
+                            <li class="nav-item nav_item d-none d-md-inline">
+                                <a class="nav-link" href="#">SHOPPING TOOLS <i class="fa fa-angle-down"></i></a>
+                            </li>
+                        </div>
+                        <div class="d-md-flex">
+                            <li class="nav-item d-none d-md-inline">
+                                <a class="nav-link" href="#"><i class="fa fa-map-marker-alt"></i> Dealers</a>
+                            </li>
+                            <li class="nav-item d-inline d-md-none">
+                                <a class="nav-link" href="#"> Shopping Tools</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Owners</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Discovers
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-menu-detail dropdown-item d-flex">
+                                        <div class="dropdown-detail-left">
+                                            <h3>Technology</h3>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Honda Safety</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Honda Sensing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">How to Videos &amp; Guides <br> by Vehicles</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Environmental Vehicles</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-detail-right">
+                                            <h3>Community</h3>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Auto Shows</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Serial One</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">News &amp; Events</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-social dropdown-item ">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-google-plus-g"></i>
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <i class="fa fa-envelope"></i>
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Languages
+                                </a>
+                                <ul class="dropdown-menu menu-languages">
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                    <li><a class="dropdown-item" href="#">Vietnamese</a></li>
+
+                                    <li><a class="dropdown-item" href="#">Chinese</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class="d-flex btnSearch d-none d-md-block" role="search">
+                        <button onclick="openSearch()" class="btn" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <section id="search-area" class="search-field d-block d-md-none ">
+                        <div class="search d-flex">
+                            <i class="fa fa-search"></i>
+                            <input class="form-control" placeholder="Type something">
+                            <button class="btn_search">Search</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="search-area" class="search-field ">
+        <div class="search d-flex">
+            <i class="fa fa-search"></i>
+            <input class="form-control" placeholder="Type something">
+            <button class="btn_search">Search</button>
+        </div>
+    </section>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/banner-1.jpg" class="d-md-block d-none w-100" alt="...">
+                <img src="./img/banner-1-xs.jpg" class="d-block d-md-none w-100" alt="...">
+                <div class="carousel-caption d-block">
+                    <button class="btnRed">EXPLORE</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner-2.jpg" class="d-md-block d-none w-100" alt="...">
+                <img src="./img/banner-2-xs.jpg" class="d-block d-md-none w-100" alt="...">
+                <div class="carousel-caption d-block">
+                    <button class="btnRed">EXPLORE</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner-3.jpg" class="d-md-block d-none w-100" alt="...">
+                <img src="./img/banner-3-xs.jpg" class="d-block d-md-none w-100" alt="...">
+                <div class="carousel-caption d-block">
+                    <button class="btnRed ">EXPLORE</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner-4.jpg" class="d-md-block d-none w-100" alt="...">
+                <img src="./img/banner-4-xs.jpg" class="d-block d-md-none w-100" alt="...">
+                <div class="carousel-caption d-block">
+                    <button class="btnRed ">EXPLORE</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#myCarousel"
+            data-bs-slide="prev">
+            <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-control" type="button" data-bs-target="#myCarousel"
+            data-bs-slide="next">
+            <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <section id="intro">
+        <div class="container-fluid contain">
+            <div class="row">
+                <div id="intro-left" class="col-lg-5 col-12 mb-lg-0 mb-5 sub-intro intro-left-1">
+                    <div class="intro-text">
+                        <h4>Future Vehicles</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis fuga nisi, dolor magnam
+                            soluta magni aperiam vero repudiandae ipsam voluptatem?</p>
+                        <button class="btnBlue">GO</button>
+                    </div>
+                </div>
+                <div id="intro-right" class="col-lg-5 col-12 sub-intro intro-right-1">
+                    <div class="intro-text">
+                        <h4>BUILT & PRICES</h4>
+                        <p>Personalize a 2018 ACCORD SEDAN to make it your own</p>
+                        <button class="btnWhite">BUILT MY VEHICLE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="our-vehicle">
+        <h1 class="display-1 text-center">Our Vehicles</h1>
+        <div id="slideVehicles" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button data-bs-target="#slideVehicles" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1">
+                    CARS
+                </button>
+                <button data-bs-target="#slideVehicles" data-bs-slide-to="1" aria-label="Slide 2">
+                    CROSSOVER & SUVS
+                </button>
+                <button data-bs-target="#slideVehicles" data-bs-slide-to="2" aria-label="Slide 3">
+                    MINIVANS & TRUCK
+                </button>
+                <button data-bs-target="#slideVehicles" data-bs-slide-to="3" aria-label="Slide 4">
+                    ENVIRONMENTAL
+                </button>
+                <button data-bs-target="#slideVehicles" data-bs-slide-to="4" aria-label="Slide 5">
+                    FUTURE
+                </button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/slider-1.jpg" class="d-md-block d-none w-100 h-100" alt="...">
+                    <img src="./img/slider-1-xs.jpg" class="d-block d-md-none img-fluid w-100 h-100" alt="...">
+                    <div class="carousel-caption text-start ">
+                        <h3 class="text-start">CAR 1<span>/12</span></h3>
+                        <img class="img-fluid" src="./img/civic-logo.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque aliquam inventore ab
+                            neque fugiat consectetur nobis sint!</p>
+                        <div class="carousel-detail text-start d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,570</h2>
+                                <p>STARTING MSRB</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY RATING</p>
+                            </div>
+                        </div>
+                        <div class="text-start carousel-btn">
+                            <button class="btnRed btnCaption">EXPLORE</button>
+                            <button class="btnWhite btnCaption">BUILD</button>
+                        </div>
+
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">EXPLORE THE ACCORD FAMILY ></a>
+                        <img class="d-lg-block d-none" src="./img/accord-family-vehicles-2x.png">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/slider-2.jpg" class="d-md-block d-none w-100 h-100" alt="...">
+                    <img src="./img/slider-2-xs.jpg" class="d-block d-md-none img-fluid w-100 h-100" alt="...">
+                    <div class="carousel-caption text-start ">
+                        <h3 class="text-start">CAR 1<span>/12</span></h3>
+                        <img class="img-fluid" src="./img/civic-logo.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque aliquam inventore ab
+                            neque fugiat consectetur nobis sint!</p>
+                        <div class="carousel-detail text-start d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,570</h2>
+                                <p>STARTING MSRB</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY RATING</p>
+                            </div>
+                        </div>
+                        <div class="text-start carousel-btn">
+                            <button class="btnRed btnCaption">EXPLORE</button>
+                            <button class="btnWhite btnCaption">BUILD</button>
+                        </div>
+
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">EXPLORE THE ACCORD FAMILY ></a>
+                        <img class="d-lg-block d-none" src="./img/accord-family-vehicles-2x.png">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/slider-3.jpg" class="d-md-block d-none w-100 h-100" alt="...">
+                    <img src="./img/slider-3-xs.jpg" class="d-block d-md-none img-fluid w-100 h-100" alt="...">
+                    <div class="carousel-caption text-start ">
+                        <h3 class="text-start">CAR 1<span>/12</span></h3>
+                        <img class="img-fluid" src="./img/civic-logo.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque aliquam inventore ab
+                            neque fugiat consectetur nobis sint!</p>
+                        <div class="carousel-detail text-start d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,570</h2>
+                                <p>STARTING MSRB</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY RATING</p>
+                            </div>
+                        </div>
+                        <div class="text-start carousel-btn">
+                            <button class="btnRed btnCaption">EXPLORE</button>
+                            <button class="btnWhite btnCaption">BUILD</button>
+                        </div>
+
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">EXPLORE THE ACCORD FAMILY ></a>
+                        <img class="d-lg-block d-none" src="./img/accord-family-vehicles-2x.png">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/slider-4.jpg" class="d-md-block d-none w-100 h-100" alt="...">
+                    <img src="./img/slider-4-xs.jpg" class="d-block d-md-none img-fluid w-100 h-100" alt="...">
+                    <div class="carousel-caption text-start ">
+                        <h3 class="text-start">CAR 1<span>/12</span></h3>
+                        <img class="img-fluid" src="./img/civic-logo.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque aliquam inventore ab
+                            neque fugiat consectetur nobis sint!</p>
+                        <div class="carousel-detail text-start d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,570</h2>
+                                <p>STARTING MSRB</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY RATING</p>
+                            </div>
+                        </div>
+                        <div class="text-start carousel-btn">
+                            <button class="btnRed btnCaption">EXPLORE</button>
+                            <button class="btnWhite btnCaption">BUILD</button>
+                        </div>
+
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-around align-items-center">
+                        <a href="#">EXPLORE THE ACCORD FAMILY ></a>
+                        <img class="d-lg-block d-none" src="./img/accord-family-vehicles-2x.png">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/slider-5.jpg" class="d-md-block d-none w-100 h-100" alt="...">
+                    <img src="./img/slider-5-xs.jpg" class="d-block d-md-none img-fluid w-100 h-100" alt="...">
+                    <div class="carousel-caption text-start ">
+                        <h3 class="text-start">CAR 1<span>/12</span></h3>
+                        <img class="img-fluid" src="./img/civic-logo.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque aliquam inventore ab
+                            neque fugiat consectetur nobis sint!</p>
+                        <div class="carousel-detail text-start d-flex justify-content-between">
+                            <div class="carousel-detail-content">
+                                <h2>$23,570</h2>
+                                <p>STARTING MSRB</p>
+                            </div>
+                            <div class="carousel-detail-content">
+                                <h2>38/30</h2>
+                                <p>HWY/CITY RATING</p>
+                            </div>
+                        </div>
+                        <div class="text-start carousel-btn">
+                            <button class="btnRed btnCaption">EXPLORE</button>
+                            <button class="btnWhite btnCaption">BUILD</button>
+                        </div>
+
+                    </div>
+                    <div class="carousel-caption-footer d-flex justify-content-between align-items-center">
+                        <a href="#">EXPLORE THE ACCORD FAMILY ></a>
+                        <img class="d-lg-block d-none" src="./img/accord-family-vehicles-2x.png">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#slideVehicles"
+                data-bs-slide="prev">
+                <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next carousel-control" type="button" data-bs-target="#slideVehicles"
+                data-bs-slide="next">
+                <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container-fluid contain">
+            <div class="row">
+                <div class="col-md-3 mb-4 col-sm-6 col-12">
+                    <div class="service-item service-item-1">
+                        <div class="sub-service">
+                            <h3>Build & Price</h3>
+                            <p>Customize a honda vehicle to make your very own</p>
+                            <button class="btnBlue">GO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-sm-6 col-12">
+                    <div class="service-item service-item-2">
+                        <div class="sub-service">
+                            <h3>Compare Vehicles</h3>
+                            <p>Customize a honda vehicle to make your very own</p>
+                            <button class="btnBlue">GO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-sm-6 col-12">
+                    <div class="service-item service-item-3">
+                        <div class="sub-service">
+                            <h3>Search Inventory</h3>
+                            <p>Customize a honda vehicle to make your very own</p>
+                            <button class="btnBlue">GO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-sm-6 col-12">
+                    <div class="service-item service-item-4">
+                        <div class=" sub-service">
+                            <h3>Current Offers</h3>
+                            <p>Customize a honda vehicle to make your very own</p>
+                            <button class="btnBlue">GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="intro2">
+        <div class="container-fluid contain">
+            <div class="row">
+                <div class="col-lg-5 col-12 mb-lg-0 mb-5 sub-intro intro-left-2">
+                    <div class="intro-text">
+                        <h4>Future Vehicles</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis fuga nisi, dolor magnam
+                            soluta magni aperiam vero repudiandae ipsam voluptatem?</p>
+                        <button class="btnRed">GO</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12 sub-intro intro-right-2">
+                    <div class="intro-text">
+                        <h4>Future Vehicles</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis fuga nisi, dolor magnam
+                            soluta magni aperiam vero repudiandae ipsam voluptatem?</p>
+                        <button class="btnRed">GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="discover">
+        <div class="discover-text text-center">
+            <h1 class="display-1 ">Discover Honda</h1>
+            <p>Explore the world of Honda through our latest news, events and videos.</p>
+        </div>
+        <div class="container-fluid contain">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card card-1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">2017 KBB.com Most Awarded Brand</h5>
+                            <p class="card-text">With more than two dozen brand and individual awards, Kelly Blue Book's
+                                KBB.com has awarded Honda as the most awarded brand of 2017.</p>
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card card-2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Meet The Accord</h5>
+                            <p class="card-text">With more than two dozen brand and individual awards, Kelly Blue Book's
+                                KBB.com has awarded Honda as the most awarded brand of 2017.</p>
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card card-3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Innovative & Refined</h5>
+                            <p class="card-text">With more than two dozen brand and individual awards, Kelly Blue Book's
+                                KBB.com has awarded Honda as the most awarded brand of 2017.</p>
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card card-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Honda Sensing</h5>
+                            <p class="card-text">With more than two dozen brand and individual awards, Kelly Blue Book's
+                                KBB.com has awarded Honda as the most awarded brand of 2017.</p>
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card card-5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">2018 Green Car Of Year</h5>
+                            <p class="card-text">With more than two dozen brand and individual awards, Kelly Blue Book's
+                                KBB.com has awarded Honda as the most awarded brand of 2017.</p>
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="card-body-item">
+                            <i class="fab fa-twitter"></i>
+                            <div class="discover-item">
+                                <div class="discover-item-logo d-flex">
+                                    <img src="./img/logo-honda.jpg">
+                                    <p>
+                                        <a href="#">Honda</a><br>
+                                        <a href="#">@Honda</a>
+                                    </p>
+                                </div>
+                                <h3>You don't know what surprises can pop up on the road. #RemoveTheDistractions 📵 when
+                                    you’re behind the wheel.
+                                    <a href="#">https://t.co/UC7OLudVr4</a>
+                                </h3>
+                                <h4>
+                                    <a href="#">12:00 AM - 07 Apr 2018</a>
+                                </h4>
+                                <p class="discover-twitter-interaction">
+                                    <span><i class="fa fa-reply"></i></span>
+                                    <span><i class="fa fa-retweet"></i> 10</span>
+                                    <span><i class="fa fa-heart"></i> 23</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="search-field">
+        <div class="search d-flex">
+            <i class="fa fa-search"></i>
+            <input class="form-control" placeholder="Type something">
+            <button class="btn_search">Search</button>
+            <button onclick="topFunction()" id="btnBack" class="btn_back">Back to top <i
+                    class="fa fa-angle-up"></i></button>
+        </div>
+    </section>
+
+    <footer id="footer" class="d-flex justify-content-around">
+        <div class="footer-detail">
+            <h3 class="d-md-block d-none">Vehicles</h3>
+            <h3 class="d-flex mb-0 py-4 d-md-none collapsed" data-bs-toggle="collapse" href="#vehicle-footer-nav" role="button" aria-expanded="false" aria-controls="vehicle-footer-nav">
+               <span>Vehicles</span> <i class="fa fa-plus-circle"></i>
+              </h3>
+            <div class="collapse" id="vehicle-footer-nav">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Civic Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-detail">
+            <h3 class="d-md-block d-none">Shopping Tools</h3>
+            <h3 class="d-flex mb-0 py-4 d-md-none collapsed" data-bs-toggle="collapse" href="#shopping-footer-nav" role="button" aria-expanded="false" aria-controls="shopping-footer-nav">
+                <span>Shopping Tools</span> <i class="fa fa-plus-circle"></i>
+              </h3>
+            <div class="collapse" id="shopping-footer-nav">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Civic Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-detail">
+            <h3 class="d-md-block d-none">Discover Honda</h3>
+            <h3 class="d-flex mb-0 py-4 d-md-none collapsed" data-bs-toggle="collapse" href="#discover-footer-nav" role="button" aria-expanded="false" aria-controls="discover-footer-nav">
+                <span>Discover Honda</span> <i class="fa fa-plus-circle"></i>
+              </h3>
+            <div class="collapse" id="discover-footer-nav">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Civic Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-detail">
+            <h3 class="d-md-block d-none">Help & Support</h3>
+            <h3 class="d-flex mb-0 py-4 d-md-none collapsed" data-bs-toggle="collapse" href="#help-footer-nav" role="button" aria-expanded="false" aria-controls="help-footer-nav">
+                <span>Help & Support</span> <i class="fa fa-plus-circle"></i>
+              </h3>
+            <div class="collapse" id="help-footer-nav">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Civic Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-detail">
+            <h3 class="d-md-block d-none">Owners</h3>
+            <h3 class="d-flex mb-0 py-4 d-md-none collapsed" data-bs-toggle="collapse" href="#owners-footer-nav" role="button" aria-expanded="false" aria-controls="owners-footer-nav">
+                <span>Owners</span> <i class="fa fa-plus-circle"></i>
+              </h3>
+            <div class="collapse" id="owners-footer-nav">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Civic Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                    <li>
+                        <a href="#">Accord Models</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-touch d-flex justify-content-around">
+        <div class="touch-left">
+            <h1>Stay In Touch</h1>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fa fa-envelope"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="touch-right">
+            <p>Receive the latest news and exclusive updates.</p>
+            <button class="btn btn_search">
+                <i class="fa fa-envelope"></i>
+                STAY INFORMED
+            </button>
+        </div>
+    </div>
+    <footer id="copyright">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 copy-right-left">
+                    <p>
+                        ©2023
+                        <a href="#">Tran Phu</a>
+                        All information contained herein applies to U.S. vehicles only. Please see our
+                        <a href="#">Privacy Policy</a>
+                        and
+                        <a href="#">Legal Terms and Conditions.</a> For non-U.S.-distributor information go to
+                        <a href="#">world.honda.com</a>
+                    </p>
+                </div>
+                <div class="col-md-7 copy-right-right">
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="#">Vehicle Data Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Term &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Site Map</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-12 d-flex justify-content-around logo-footer">
+                    <img class="d-block d-md-inline" src="img/footer-logo-1.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-2.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-3.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-4.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-5.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-6.jpg">
+                    <img class="d-none d-md-inline" src="img/footer-logo-7.png">
+                    <img class="d-none d-md-inline" src="img/footer-logo-8.jpg">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- modal  -->
+    <div class="modal fade" id="vehicleModal" tabindex="-1" aria-labelledby="vehicleModal" aria-hidden="true">
+        <div class="modal-dialog container">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid tab-content" id="nav-tabContent">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="vehicle-title text-center">
+                                    <h1>CAR <span><i class="fa fa-circle"></i>Sedan</span></h1>
+                                </div>
+                                <hr size="2" class="line">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-1')" onmouseleave="leaveCar('xe-1')">
+                                    <img src="./img/xe-1.png" id="xe-1" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-2')" onmouseleave="leaveCar('xe-2')">
+                                    <img src="./img/xe-2.png" id="xe-2" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-3')" onmouseleave="leaveCar('xe-3')">
+                                    <img src="./img/xe-3.png" id="xe-3" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-4')" onmouseleave="leaveCar('xe-4')">
+                                    <img src="./img/xe-4.png" id="xe-4" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-5')" onmouseleave="leaveCar('xe-5')">
+                                    <img src="./img/xe-5.png" id="xe-5" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                                <div class="card" onmouseenter="enterCar('xe-6')" onmouseleave="leaveCar('xe-6')">
+                                    <img src="./img/xe-6.png" id="xe-6" class="img-car" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Civic Sedan</h5>
+                                        <div class="civic-detail d-flex justify-content-evenly">
+                                            <div class="civic-item">
+                                                <h4>$18,810</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                            <div class="civic-item">
+                                                <h4>40/28</h4>
+                                                <p>Staring</p>
+                                                <p>MSRP</p>
+                                            </div>
+                                        </div>
+                                        <div class="civic-btn text-center">
+                                            <button class="btnBlue">EXPLORE</button>
+                                            <button class="btn_search">BUILD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- boostrap 5 js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- owl carousel  -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <!-- main js  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

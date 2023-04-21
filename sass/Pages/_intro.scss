@@ -1,0 +1,111 @@
+@keyframes turn-left {
+    0%   { left:-8%;}
+    100% { left: 0;}
+  }
+@keyframes turn-right {
+    0%   { right:-8%;}
+    100% { right: 0;}
+  }
+#intro {
+    margin-top: -10%;
+    
+    .contain {
+        padding: 0 5%;
+    }
+
+    .sub-intro {
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: $color-black;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+    }
+
+    .intro-left-1 {
+        background-image: url('../../img/our-vehicle-intro-1.jpg');
+        
+        .intro-text {
+            text-align: center;
+            font-size: 1.4rem;
+            position: absolute;
+            bottom: 10%;
+            color: white;
+            padding: 10px;
+            h4 {
+                font-size: $font-size-2;
+                font-weight: $font-weight-bold;
+                margin-bottom: $mg-2;
+            }
+        }
+    }
+    
+
+
+    .intro-right-1 {
+        background-image: url('../../img/our-vehicles-intro-2.jpg');
+        
+        .intro-text {
+            position: absolute;
+            color: $color-white;
+            font-size: 1.8rem;
+            top: 30%;
+            width: 40%;
+            h4 {
+                font-weight: bold;
+                margin-bottom: 20px;
+                background: rgba(0, 67, 108, 0.8);
+                padding: 6px 15px;
+                display: inline-block;
+                
+            }
+            p{
+                font-weight: $font-weight-bold;
+                margin-bottom: $mg-3;
+            }
+        }
+    }
+    
+}
+#intro2 {
+    .contain {
+        padding: 0 5%;
+    }
+
+    .sub-intro {
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: $color-black;
+        background-position: center;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+        .intro-text {
+            text-align: center;
+            font-size: 1.4rem;
+            position: absolute;
+            bottom: 10%;
+            color: white;
+            padding: 10px;
+            h4 {
+                font-size: $font-size-2;
+                font-weight: $font-weight-bold;
+                margin-bottom: $mg-2;
+            }
+        }
+    }
+
+    .intro-left-2 {
+        background-image: url('../../img/intro-3.jpg');
+    }
+    .intro-right-2 {
+        background-image: url('../../img/intro-4.jpg');
+    }
+}
+
+@include responsive("992px"){
+    #intro{
+        margin-top: -15%;
+    }
+}

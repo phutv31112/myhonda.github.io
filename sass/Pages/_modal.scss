@@ -1,0 +1,104 @@
+#vehicleModal {
+    .modal-dialog {
+        max-width: unset;
+        width: 80%;
+        margin-top: 72px;
+        margin: auto;
+
+        .modal-content {
+            .modal-header{
+                .btn-close{
+                    width: 3em;
+                    height: 2em;
+                    background-color: red;
+                }
+            }
+            .modal-body {
+                background-color: #f5f5f5;
+
+                .row {
+                    .card {
+                        background: linear-gradient(#bbbdc0, #f5f5f5, #f5f5f5);
+
+                        .card-body {
+                            .card-title {
+                                font-size: 1.8rem;
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                            }
+
+                            .civic-detail {
+                                .civic-item {
+                                    h4 {
+                                        font-weight: normal;
+                                        font-size: 2.4rem;
+                                    }
+
+                                    p {
+                                        font-size: 1.4rem;
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                            }
+                            .civic-btn{
+                                margin-top: 1.4rem;
+                                button:first-child{
+                                    margin-right: 1.4rem;
+                                    padding: 6px 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    .vehicle-title {
+                        position: relative;
+
+                        h1 {
+                            background-color: #f5f5f5;
+                            padding: 0 6px;
+                            color: #00324f;
+                            font-weight: bold;
+                            font-size: 2.4rem;
+
+                            span {
+                                font-weight: $font-weight-normal;
+                            }
+
+                            i {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@include responsive("1180px"){
+    #vehicleModal {
+        .modal-dialog {
+            .modal-content{
+                .modal-body{
+                    .row{
+                        .card{
+                            .card-body{
+                                .civic-btn{
+                                    button{
+                                        padding: 6px 15px;
+                                    }
+                                    button:first-child{
+                                        margin-right: 0;
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

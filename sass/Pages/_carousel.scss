@@ -1,0 +1,86 @@
+#myCarousel{
+    height: 800px;
+    padding-top: 70px;
+    background-color: $color-dark-blue-200;
+    .carousel-control{
+        width: 60px;
+        height: 100px;
+        border-radius: 10px;
+        top: 26%;
+        color: $color-blue-100;
+        background-color: $color-grey;
+        span i{
+            font-size: 50px;
+            color: $color-blue-100;
+        }
+    }
+    .carousel-indicators{
+        bottom:26%;
+        button{
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: $color-blue-100;
+            margin: 0 $mg-7;
+        }
+    }
+}
+
+@include responsive("1024px"){
+    #myCarousel{
+        .carousel-inner{
+            .carousel-item{
+                .carousel-caption{
+                    bottom: -10px;
+                }
+            }
+        }
+        .carousel-control{
+            width: 45px;
+            height: 70px;
+            top: 15%;
+        }
+    }
+}
+@include responsive("992px"){
+    #myCarousel{
+        height: 580px;
+        .carousel-indicators{
+           bottom: 32%;
+        }
+    }
+}
+@include responsive("768px"){
+    #myCarousel{
+        .carousel-inner{
+            .carousel-item{
+                .carousel-caption{
+                    bottom: 10%;
+                }
+            }
+        }
+        .carousel-indicators{
+           bottom: 10%;
+        }
+        .carousel-control{
+            top: 40%;
+        }
+    }
+}
+@include responsive("576px"){
+    #myCarousel{
+        .carousel-inner{
+            .carousel-item{
+                .carousel-caption{
+                    bottom: 6%;
+                }
+            }
+        }
+        .carousel-indicators{
+           bottom:22%;
+        }
+        .carousel-control{
+            top: 34%;
+        }
+    }
+}
